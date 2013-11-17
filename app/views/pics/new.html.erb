@@ -1,12 +1,23 @@
-<h2>
-	<%= simple_form_for @pic do |f|%>
-		<%= f.input :lesson %>
-		<%= f.input :emotion %>
-		<%= f.input :learned %>
 
-		<%= submit_tag 'Save' %>
+<div class="span6 offset3 text-center boxy">
+
+	<h1 class="h1-custom">
+		Upload lesson
+
+		<br/>
+
+	<%= simple_form_for @pic do |f|%>
+		
+		<h2>
+		<%= f.input :lesson, :label => 'Your latest lesson', :placeholder => "1, 2, etc" %>
+		<%= f.input :emotion, :label => 'How did you feel', :placeholder => "Stoked, Happy, Jazzed" %>
+		<%= f.input :learned, :label => "What did you learn", :placeholder => "HTML5, CSS3, Rails, Github, etc" %>
+
+		<br/>
+	
+
+		<%= submit_tag 'Save', :class => 'btn btn-warning btn-large' %>
 
 	<% end %>
+</div>
 
-
-</h2>
